@@ -36,8 +36,6 @@
     });
     const year = document.getElementById('year');
     if(year) year.textContent = new Date().getFullYear();
-
-    // Avisar que los parciales están listos (útil para el carrusel)
     document.dispatchEvent(new CustomEvent('partials:ready'));
   }
   if(document.readyState !== 'loading') injectPartials();

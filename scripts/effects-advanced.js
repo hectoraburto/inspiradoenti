@@ -1,13 +1,9 @@
 
 (function(){
-  // --- Reading progress bar
+  // Progress bar
   function initProgressBar(){
     let bar = document.querySelector('.progress-bar');
-    if(!bar){
-      bar = document.createElement('div');
-      bar.className = 'progress-bar';
-      document.body.appendChild(bar);
-    }
+    if(!bar){ bar = document.createElement('div'); bar.className = 'progress-bar'; document.body.appendChild(bar); }
     const update = ()=>{
       const h = document.documentElement;
       const max = h.scrollHeight - h.clientHeight;
@@ -18,12 +14,10 @@
     window.addEventListener('resize', update);
     update();
   }
-
-  // --- Ripple on buttons
+  // Ripple
   function initRipple(){
     document.body.addEventListener('click', (e)=>{
-      const btn = e.target.closest('.btn');
-      if(!btn) return;
+      const btn = e.target.closest('.btn'); if(!btn) return;
       const rect = btn.getBoundingClientRect();
       const x = e.clientX - rect.left, y = e.clientY - rect.top;
       const r = document.createElement('span');
@@ -35,8 +29,7 @@
       setTimeout(()=> r.remove(), 600);
     });
   }
-
-  // --- Tilt 3D
+  // Tilt
   function initTilt(){
     const els = document.querySelectorAll('.card, .service');
     els.forEach(el=> el.classList.add('tilt'));
@@ -47,7 +40,7 @@
       const cy = r.top + r.height/2;
       const dx = (e.clientX - cx) / (r.width/2);
       const dy = (e.clientY - cy) / (r.height/2);
-      const max = 8; // degrees
+      const max = 8;
       el.style.transform = `rotateX(${-dy*max}deg) rotateY(${dx*max}deg)`;
     }
     function reset(e){ e.currentTarget.style.transform = 'rotateX(0) rotateY(0)'; }
@@ -56,8 +49,7 @@
       el.addEventListener('mouseleave', reset);
     });
   }
-
-  // --- Counters
+  // Counters
   function initCounters(){
     const nums = document.querySelectorAll('[data-counter]');
     if(nums.length===0) return;
@@ -70,7 +62,7 @@
         const start = performance.now();
         function tick(now){
           const t = Math.min(1, (now - start)/dur);
-          const val = Math.floor(target * (t*(2 - t))); // ease-out
+          const val = Math.floor(target * (t*(2 - t)));
           el.textContent = val.toLocaleString('es-CL');
           if(t<1) requestAnimationFrame(tick);
         }
@@ -80,8 +72,7 @@
     }, {threshold:0.4});
     nums.forEach(n=> io.observe(n));
   }
-
-  // --- Parallax for carousel icons
+  // Parallax for carousel icons
   function initParallax(){
     const icons = document.querySelectorAll('.carousel .slide-icon');
     if(icons.length===0) return;
@@ -90,20 +81,12 @@
       icons.forEach(ic=>{
         const r = ic.getBoundingClientRect();
         const center = r.top + r.height/2;
-        const rel = (center - vh/2) / vh; // -1..1 aprox
-        ic.style.transform = `translateY(${rel * -20}px)`; // move opposite
+        const rel = (center - vh/2) / vh;
+        ic.style.transform = `translateY(${rel * -20}px)`;
       });
     }, {passive:true});
   }
-
-  function run(){
-    initProgressBar();
-    initRipple();
-    initTilt();
-    initCounters();
-    initParallax();
-  }
-
+  function run(){ initProgressBar(); initRipple(); initTilt(); initCounters(); initParallax(); }
   document.addEventListener('partials:ready', run);
   document.addEventListener('DOMContentLoaded', run);
 })();

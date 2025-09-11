@@ -16,10 +16,7 @@
     }, {root:null, rootMargin:'0px', threshold:0.12});
     document.querySelectorAll('.reveal').forEach(el=> io.observe(el));
   }
-  function run(){
-    addRevealTargets();
-    initReveal();
-  }
+  function run(){ addRevealTargets(); initReveal(); }
   document.addEventListener('partials:ready', run);
   document.addEventListener('DOMContentLoaded', run);
 })();

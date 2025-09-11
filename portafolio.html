@@ -13,23 +13,28 @@
   <link rel="stylesheet" href="./styles/components.css">
 </head>
 <body>
+  <div class="progress-bar"></div>
   <div data-include="./partials/header.html"></div>
   <div data-include="./partials/hero-carousel.html"></div>
 
 <main class="container section">
   <h1>Portafolio</h1>
   <p class="tagline">Pronto subiré una selección de 6–12 proyectos. Si quieres que destaque uno primero, dímelo y lo preparo.</p>
-  <div class="grid grid-3 mt-2">
-    <div class="card center"><img src="./assets/img/vectors/imprenta.svg" alt="" style="width:100%;border-radius:12px;opacity:.06"></div>
-    <div class="card center"><img src="./assets/img/vectors/diseno.svg" alt="" style="width:100%;border-radius:12px;opacity:.06"></div>
-    <div class="card center"><img src="./assets/img/vectors/marketing.svg" alt="" style="width:100%;border-radius:12px;opacity:.06"></div>
+  <div class="work-grid">
+    <img src="./assets/img/portfolio/p1.jpg" alt="Trabajo 1" class="reveal">
+    <img src="./assets/img/portfolio/p2.jpg" alt="Trabajo 2" class="reveal">
+    <img src="./assets/img/portfolio/p3.jpg" alt="Trabajo 3" class="reveal">
+    <img src="./assets/img/portfolio/p4.jpg" alt="Trabajo 4" class="reveal">
+    <img src="./assets/img/portfolio/p5.jpg" alt="Trabajo 5" class="reveal">
+    <img src="./assets/img/portfolio/p6.jpg" alt="Trabajo 6" class="reveal">
   </div>
 </main>
 
   <div data-include="./partials/footer.html"></div>
   <script src="./scripts/include.js" defer></script>
+  <script src="./scripts/effects.js" defer></script>
   <script src="./scripts/carousel.js" defer></script>
-<script src="./scripts/effects.js" defer></script>
-<script src="./scripts/effects-advanced.js" defer></script>
+  <script src="./scripts/effects-advanced.js" defer></script>
+  
 </body>
 </html>
