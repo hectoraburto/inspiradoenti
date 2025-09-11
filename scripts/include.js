@@ -1,21 +1,16 @@
 
-// include.js – Carga de parciales + UI básica (menú)
 (function(){
   async function injectPartials(){
     const slots = document.querySelectorAll('[data-include]');
     for (const el of slots){
       const file = el.getAttribute('data-include');
       try{
-        // Resolver ruta relativa al archivo de este script
         const base = new URL('.', document.currentScript.src);
-        const url  = new URL(file, base); // e.g. ../partials/header.html
+        const url  = new URL(file, base);
         const res  = await fetch(url);
         el.outerHTML = await res.text();
-      }catch(e){
-        console.error('No se pudo cargar el parcial', file, e);
-      }
+      }catch(e){ console.error('No se pudo cargar el parcial', file, e); }
     }
-    // Después de inyectar, enlazar UI
     const toggle = document.querySelector('.nav-toggle');
     const links = document.querySelector('#nav-links');
     if (toggle && links){
