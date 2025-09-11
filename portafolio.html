@@ -13,19 +13,21 @@
   <link rel="stylesheet" href="./styles/components.css">
 </head>
 <body>
-<div data-include="./partials/header.html"></div>
+  <div data-include="./partials/header.html"></div>
+  <div data-include="./partials/hero-carousel.html"></div>
 
 <main class="container section">
   <h1>Portafolio</h1>
   <p class="tagline">Pronto subiré una selección de 6–12 proyectos. Si quieres que destaque uno primero, dímelo y lo preparo.</p>
   <div class="grid grid-3 mt-2">
-    <div class="card center"><img src="./assets/img/logo.png" alt="" style="width:100%;border-radius:12px;opacity:.06"></div>
-    <div class="card center"><img src="./assets/img/logo.png" alt="" style="width:100%;border-radius:12px;opacity:.06"></div>
-    <div class="card center"><img src="./assets/img/logo.png" alt="" style="width:100%;border-radius:12px;opacity:.06"></div>
+    <div class="card center"><img src="./assets/img/vectors/imprenta.svg" alt="" style="width:100%;border-radius:12px;opacity:.06"></div>
+    <div class="card center"><img src="./assets/img/vectors/diseno.svg" alt="" style="width:100%;border-radius:12px;opacity:.06"></div>
+    <div class="card center"><img src="./assets/img/vectors/marketing.svg" alt="" style="width:100%;border-radius:12px;opacity:.06"></div>
   </div>
 </main>
 
-<div data-include="./partials/footer.html"></div>
-<script src="./scripts/include.js"></script>
+  <div data-include="./partials/footer.html"></div>
+  <script src="./scripts/include.js" defer></script>
+  <script src="./scripts/carousel.js" defer></script>
 </body>
 </html>

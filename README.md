@@ -1,13 +1,13 @@
-# Inspirado en Ti — sitio estático
-Colores de marca: **#2e99d5** (brand) y **#fbbd02** (accent). Tipografía: Verdana.
+# Inspirado en Ti — build con carrusel y menú Servicios
+- Colores: #2e99d5 (brand) y #fbbd02 (accent). Tipografía: Verdana.
+- Parciales: `partials/header.html`, `partials/footer.html`, `partials/hero-carousel.html`
+- Carrusel: `scripts/carousel.js` (auto-play) + estilos en `styles/main.css`
+- Menú Servicios con descripciones + LinkedIn
+- Imprenta: cards + **tabla** desde `data/servicios-imprenta.json`
+- Footer con WhatsApp +56 9 7528 0566 · hector.aburto@gmail.com · Santiago, RM
 
-- WhatsApp: +56 9 7528 0566
-- Email: hector.aburto@gmail.com
-- Región Metropolitana, Santiago — Chile
+## Local
+VS Code + Live Server → abrir `index.html`
 
-## Correr en local
-1. Abre la carpeta en VS Code.
-2. Extensión *Live Server* → Open with Live Server sobre `index.html`.
-
-## Publicar en GitHub Pages
-Sube el contenido y activa Pages en Settings → Pages.
+## GitHub Pages
+Sube todo el contenido del zip a tu repo (`/root`) y refresca con Ctrl/Cmd+Shift+R para limpiar caché.

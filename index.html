@@ -13,7 +13,8 @@
   <link rel="stylesheet" href="./styles/components.css">
 </head>
 <body>
-<div data-include="./partials/header.html"></div>
+  <div data-include="./partials/header.html"></div>
+  <div data-include="./partials/hero-carousel.html"></div>
 
 <section class="hero">
   <div class="container">
@@ -24,7 +25,6 @@
       <a class="btn" href="./contacto.html">Cotiza ahora</a>
       <a class="btn ghost" href="./portafolio.html">Ver portafolio</a>
     </div>
-    <img src="./assets/img/logo.png" alt="Logo Inspirado en Ti" class="mt-2" style="width:100%;border-radius:16px;box-shadow:var(--shadow);opacity:.06">
   </div>
 </section>
 
@@ -32,10 +32,22 @@
   <div class="container">
     <h2 class="center">¿Qué hacemos?</h2>
     <div class="grid grid-3 mt-2" style="grid-template-columns:repeat(4,1fr)">
-      <a class="card" href="./imprenta.html" style="display:block"><h3>Imprenta</h3><p class="tagline">Tarjetas, flyers, gigantografías, tazones y más.</p></a>
-      <a class="card" href="./diseno-grafico.html" style="display:block"><h3>Diseño Gráfico</h3><p class="tagline">Branding, papelería y piezas para RRSS.</p></a>
-      <a class="card" href="./marketing-digital.html" style="display:block"><h3>Marketing Digital</h3><p class="tagline">Gestión de redes, pauta y SEO on-page.</p></a>
-      <a class="card" href="./soporte-ti.html" style="display:block"><h3>Soporte & Consultoría TI</h3><p class="tagline">Microsoft 365, Azure, redes y más.</p></a>
+      <a class="card service" href="./imprenta.html" style="display:block;border-left-color:#2e99d5">
+        <img src="./assets/img/vectors/imprenta.svg" alt="">
+        <div><h3>Imprenta</h3><p class="tagline">Tarjetas, flyers, gigantografías, tazones y más.</p></div>
+      </a>
+      <a class="card service" href="./diseno-grafico.html" style="display:block;border-left-color:#fbbd02">
+        <img src="./assets/img/vectors/diseno.svg" alt="">
+        <div><h3>Diseño Gráfico</h3><p class="tagline">Branding, papelería y piezas para RRSS.</p></div>
+      </a>
+      <a class="card service" href="./marketing-digital.html" style="display:block;border-left-color:#2e99d5">
+        <img src="./assets/img/vectors/marketing.svg" alt="">
+        <div><h3>Marketing Digital</h3><p class="tagline">Gestión de redes, pauta y SEO on-page.</p></div>
+      </a>
+      <a class="card service" href="./soporte-ti.html" style="display:block;border-left-color:#fbbd02">
+        <img src="./assets/img/vectors/soporte.svg" alt="">
+        <div><h3>Soporte & Consultoría TI</h3><p class="tagline">Microsoft 365, Azure, redes y más.</p></div>
+      </a>
     </div>
   </div>
 </section>
@@ -51,7 +63,8 @@
   </div>
 </section>
 
-<div data-include="./partials/footer.html"></div>
-<script src="./scripts/include.js"></script>
+  <div data-include="./partials/footer.html"></div>
+  <script src="./scripts/include.js" defer></script>
+  <script src="./scripts/carousel.js" defer></script>
 </body>
 </html>
