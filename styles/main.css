@@ -94,3 +94,75 @@ footer .legal{border-top:1px solid #1f2937;margin-top:1rem;padding:1rem 0;color:
 
 /* table helpers */
 th,td{font-size:.95rem}
+
+
+/* --- Brand with subtitle --- */
+.brand{align-items:center}
+.brand-logo{width:40px;height:40px;border-radius:10px;object-fit:cover}
+.brand-text{display:flex;flex-direction:column;line-height:1.1}
+.brand-title{font-weight:800}
+.brand-sub{font-size:.78rem;color:var(--muted);margin-top:.15rem}
+@media (max-width:480px){.brand-sub{display:none}}
+
+/* --- LinkedIn color --- */
+.social-link{color:#0A66C2;border-color:#0A66C2}
+.social-link .icon path{fill:currentColor}
+.social-link:hover{background:#0A66C2;color:#fff}
+
+/* --- Footer social position --- */
+footer.site .container{position:relative}
+.footer-li{position:absolute;top:1rem;right:1.25rem}
+
+/* --- Buttons hover & transitions --- */
+.btn,.btn.alt,.btn.ghost{transition:background-color .2s ease,border-color .2s ease,color .2s ease,transform .2s ease,box-shadow .2s ease}
+.btn:hover{background:#1f89c7;border-color:#1f89c7;transform:translateY(-1px);box-shadow:0 12px 24px rgba(15,23,42,.12)}
+.btn.alt:hover{background:#e0ac00;border-color:#e0ac00;transform:translateY(-1px);box-shadow:0 12px 24px rgba(15,23,42,.12)}
+.btn.ghost:hover{background:#e6f4ff;border-color:#2e99d5;transform:translateY(-1px);box-shadow:0 12px 24px rgba(15,23,42,.12)}
+.btn:active,.btn.alt:active,.btn.ghost:active{transform:translateY(0);box-shadow:var(--shadow)}
+
+/* --- Card hover lift --- */
+.card{transition:transform .2s ease, border-color .2s ease, box-shadow .2s ease}
+.card:hover{border-color:#d1e9f9;transform:translateY(-2px);box-shadow:0 12px 24px rgba(15,23,42,.09)}
+
+/* --- Scroll reveal --- */
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+.reveal.show{opacity:1;transform:none}
+
+
+/* --- Nav underline animated --- */
+.nav-links a{
+  position:relative;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 0% 2px;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  transition: background-size .25s ease;
+}
+.nav-links a:hover{ background-size: 100% 2px; }
+
+/* --- Reading progress bar --- */
+.progress-bar{
+  position:fixed; top:0; left:0; height:3px; width:0%;
+  background: linear-gradient(90deg, #2e99d5, #fbbd02);
+  z-index:9999;
+  box-shadow: 0 2px 6px rgba(0,0,0,.15);
+}
+
+/* --- Ripple effect on buttons --- */
+.btn{ position:relative; overflow:hidden; }
+.btn .ripple{
+  position:absolute; border-radius:50%; transform:scale(0);
+  animation:ripple .6s linear; background:rgba(255,255,255,.6); pointer-events:none;
+}
+@keyframes ripple{ to{ transform:scale(4); opacity:0; } }
+
+/* --- Tilt effect helper --- */
+.tilt{ will-change: transform; transition: transform .12s ease-out; transform-style: preserve-3d; }
+.tilt:hover{ transition: transform .05s ease-out; }
+
+/* --- Counter styles --- */
+.kpis{display:grid; gap:1rem; grid-template-columns:repeat(3,1fr);}
+.kpi{background:#fff;border:1px solid #e5e7eb;border-radius:16px;box-shadow:var(--shadow);padding:1rem;text-align:center}
+.kpi .num{font-size:2rem;font-weight:800;color:#0f172a}
+.kpi .label{color:#475569}
+@media(max-width:960px){.kpis{grid-template-columns:1fr}}
