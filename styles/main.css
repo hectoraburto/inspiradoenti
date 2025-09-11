@@ -29,3 +29,8 @@ th,td{font-size:.95rem}
   .submenu{position:static;box-shadow:none;border:none;display:block;padding:0;margin:.2rem 0}
   .menu-btn{width:100%;text-align:left}
 }
+
+
+/* Submenu descriptions */
+.submenu a{display:flex;flex-direction:column;gap:2px}
+.submenu .subdesc{font-size:.8rem;color:var(--muted)}

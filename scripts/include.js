@@ -1,15 +1,17 @@
-
 (function(){
   async function injectPartials(){
     const slots = document.querySelectorAll('[data-include]');
+    const base = new URL('.', window.location.href); // usar la URL de la página
     for (const el of slots){
       const file = el.getAttribute('data-include');
       try{
-        const base = new URL('.', document.currentScript.src);
         const url  = new URL(file, base);
         const res  = await fetch(url);
+        if(!res.ok) throw new Error(res.status + ' ' + res.statusText);
         el.outerHTML = await res.text();
-      }catch(e){ console.error('No se pudo cargar el parcial', file, e); }
+      }catch(e){
+        console.error('No se pudo cargar el parcial', file, e);
+      }
     }
     const toggle = document.querySelector('.nav-toggle');
     const links = document.querySelector('#nav-links');
@@ -19,23 +21,23 @@
         toggle.setAttribute('aria-expanded', show ? 'true' : 'false');
       });
     }
+    // Dropdown Servicios
+    document.addEventListener('click', (e)=>{
+      const menu = document.querySelector('.menu');
+      const btn = document.querySelector('.menu-btn');
+      if(!menu || !btn) return;
+      if(btn.contains(e.target)){
+        menu.classList.toggle('open');
+        btn.setAttribute('aria-expanded', menu.classList.contains('open') ? 'true':'false');
+      }else if(!menu.contains(e.target)){
+        menu.classList.remove('open');
+        btn.setAttribute('aria-expanded','false');
+      }
+    });
+
     const year = document.getElementById('year');
     if(year) year.textContent = new Date().getFullYear();
   }
   if(document.readyState !== 'loading') injectPartials();
   else document.addEventListener('DOMContentLoaded', injectPartials);
 })();
-
-// Dropdown Servicios
-document.addEventListener('click', (e)=>{
-  const menu = document.querySelector('.menu');
-  const btn = document.querySelector('.menu-btn');
-  if(!menu || !btn) return;
-  if(btn.contains(e.target)){
-    menu.classList.toggle('open');
-    btn.setAttribute('aria-expanded', menu.classList.contains('open') ? 'true':'false');
-  }else if(!menu.contains(e.target)){
-    menu.classList.remove('open');
-    btn.setAttribute('aria-expanded','false');
-  }
-});
