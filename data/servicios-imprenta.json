@@ -1,0 +1,79 @@
+[
+  {
+    "slug": "tarjetas",
+    "nombre": "Tarjetas de visita 350g matte",
+    "detalle": "Impresas a color, doble cara. Mínimo 100 unidades.",
+    "desde": 18000,
+    "unidad": "100u"
+  },
+  {
+    "slug": "flyers",
+    "nombre": "Flyers 10×15 cm",
+    "detalle": "Couché 130g, color, tiraje desde 1000.",
+    "desde": 120000,
+    "unidad": "1000u"
+  },
+  {
+    "slug": "giganto",
+    "nombre": "Gigantografías",
+    "detalle": "Impresión en alta resolución por m².",
+    "desde": 25000,
+    "unidad": "m²"
+  },
+  {
+    "slug": "vinilo",
+    "nombre": "Vinilo adhesivo",
+    "detalle": "Blanco o transparente por m².",
+    "desde": 20000,
+    "unidad": "m²"
+  },
+  {
+    "slug": "pendon",
+    "nombre": "Pendón + estructura",
+    "detalle": "Roller 80×200 cm.",
+    "desde": 35000,
+    "unidad": "unidad"
+  },
+  {
+    "slug": "imanes",
+    "nombre": "Imanes publicitarios",
+    "detalle": "Corte a medida.",
+    "desde": 300,
+    "unidad": "unidad"
+  },
+  {
+    "slug": "lienzo",
+    "nombre": "Lienzos decorativos",
+    "detalle": "Montado en bastidor.",
+    "desde": 22000,
+    "unidad": "unidad"
+  },
+  {
+    "slug": "tazon",
+    "nombre": "Tazones personalizados",
+    "detalle": "Sublimación.",
+    "desde": 4500,
+    "unidad": "unidad"
+  },
+  {
+    "slug": "poster",
+    "nombre": "Posters",
+    "detalle": "Tamaños A3/A2.",
+    "desde": 8000,
+    "unidad": "unidad"
+  },
+  {
+    "slug": "credencial",
+    "nombre": "Credenciales",
+    "detalle": "PVC + cordón.",
+    "desde": 2000,
+    "unidad": "unidad"
+  },
+  {
+    "slug": "fotocarnet",
+    "nombre": "Foto carnet",
+    "detalle": "Pack de 6 fotos.",
+    "desde": 2500,
+    "unidad": "pack"
+  }
+]

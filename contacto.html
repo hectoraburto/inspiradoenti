@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contacto · Inspirado en Ti</title>
+  <meta name="description" content="Hablemos sobre tu proyecto.">
+  <link rel="stylesheet" href="./styles/main.css">
+  <link rel="stylesheet" href="./styles/util.css">
+  <link rel="stylesheet" href="./styles/components.css">
+</head>
+<body>
+  <div data-include="../partials/header.html"></div>
+
+  <main class="container section">
+    <h1>Contacto</h1>
+    <p class="tagline">Cuéntame qué necesitas y te responderé a la brevedad.</p>
+    <form>
+      <label>Nombre<input type="text" required></label>
+      <label>Email<input type="email" required></label>
+      <label>WhatsApp<input type="tel"></label>
+      <label>Mensaje<textarea rows="5" required></textarea></label>
+      <div class="actions">
+        <button class="btn" type="submit">Enviar</button>
+      </div>
+    </form>
+  </main>
+
+  <div data-include="../partials/footer.html"></div>
+  <script src="./scripts/include.js"></script>
+</body>
+</html>
