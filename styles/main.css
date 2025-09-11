@@ -10,3 +10,22 @@ header.site{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px s
 .section{padding:2rem 0}
 footer.site{background:#0b1220;color:#cbd5e1;margin-top:2rem}footer .columns{display:grid;gap:1.25rem;grid-template-columns:2fr 1fr 1fr}footer a{color:#e2e8f0}footer .legal{border-top:1px solid #1f2937;margin-top:1rem;padding:1rem 0;color:#94a3b8}@media (max-width:960px){footer .columns{grid-template-columns:1fr}}
 th,td{font-size:.95rem}
+
+
+/* --- Header tweaks & dropdown --- */
+.brand-logo{width:32px;height:32px;border-radius:8px;object-fit:cover}
+.social-link{display:inline-flex;align-items:center;justify-content:center;padding:.35rem;border-radius:8px;border:1px solid #e5e7eb;background:#fff}
+.social-link .icon{width:1.2rem;height:1.2rem}
+
+.menu{position:relative}
+.menu-btn{background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:.4rem .7rem;font-weight:600;cursor:pointer}
+.submenu{position:absolute;top:120%;left:0;min-width:230px;background:#fff;border:1px solid #e5e7eb;border-radius:12px;box-shadow:var(--shadow);padding:.4rem;display:none}
+.submenu a{display:block;padding:.5rem;border-radius:8px}
+.submenu a:hover{background:#f1f5f9}
+.menu.open .submenu{display:block}
+
+@media (max-width:960px){
+  .menu{width:100%}
+  .submenu{position:static;box-shadow:none;border:none;display:block;padding:0;margin:.2rem 0}
+  .menu-btn{width:100%;text-align:left}
+}

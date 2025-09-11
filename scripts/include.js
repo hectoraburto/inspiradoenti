@@ -25,3 +25,17 @@
   if(document.readyState !== 'loading') injectPartials();
   else document.addEventListener('DOMContentLoaded', injectPartials);
 })();
+
+// Dropdown Servicios
+document.addEventListener('click', (e)=>{
+  const menu = document.querySelector('.menu');
+  const btn = document.querySelector('.menu-btn');
+  if(!menu || !btn) return;
+  if(btn.contains(e.target)){
+    menu.classList.toggle('open');
+    btn.setAttribute('aria-expanded', menu.classList.contains('open') ? 'true':'false');
+  }else if(!menu.contains(e.target)){
+    menu.classList.remove('open');
+    btn.setAttribute('aria-expanded','false');
+  }
+});
