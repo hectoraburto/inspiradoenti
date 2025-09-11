@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Imprenta · Inspirado en Ti</title>
+  <meta name="description" content="Tarjetas, flyers, gigantografías, vinilos, pendones, tazones y más.">
+  <link rel="icon" href="./favicon.ico">
+  <link rel="apple-touch-icon" href="./favicon-180.png">
+  <link rel="manifest" href="data:application/manifest+json,{}">
+  <link rel="stylesheet" href="./styles/main.css">
+  <link rel="stylesheet" href="./styles/util.css">
+  <link rel="stylesheet" href="./styles/components.css">
+</head>
+<body>
+<div data-include="../partials/header.html"></div>
+
+<main class="container section">
+  <h1>Imprenta</h1>
+  <p class="tagline">Soluciones de impresión para tu marca: tarjetas de visita (350g matte, mínimo 100u), flyers 10×15 desde 1000u, gigantografías y más.</p>
+  <div id="imprenta-grid" class="grid grid-3 mt-2"></div>
+  <h2 class="mt-3">Lista de precios</h2>
+  <div class="card"><div style="overflow-x:auto">
+    <table id="tabla-imprenta" style="width:100%;border-collapse:collapse">
+      <thead><tr>
+        <th style="text-align:left;padding:.6rem;border-bottom:1px solid #e5e7eb">Servicio</th>
+        <th style="text-align:left;padding:.6rem;border-bottom:1px solid #e5e7eb">Detalle</th>
+        <th style="text-align:right;padding:.6rem;border-bottom:1px solid #e5e7eb">Desde</th>
+        <th style="text-align:left;padding:.6rem;border-bottom:1px solid #e5e7eb">Unidad</th>
+      </tr></thead>
+      <tbody></tbody>
+    </table>
+  </div></div>
+  <div class="alert info mt-2">Los precios mostrados son referenciales y pueden ajustarse según diseño, cantidades y acabados.</div>
+</main>
+<script src="./scripts/data-imprenta.js"></script>
+
+<div data-include="../partials/footer.html"></div>
+<script src="./scripts/include.js"></script>
+</body>
+</html>

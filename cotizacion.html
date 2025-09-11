@@ -5,48 +5,51 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Cotización · Inspirado en Ti</title>
   <meta name="description" content="Solicita una cotización rápida.">
+  <link rel="icon" href="./favicon.ico">
+  <link rel="apple-touch-icon" href="./favicon-180.png">
+  <link rel="manifest" href="data:application/manifest+json,{}">
   <link rel="stylesheet" href="./styles/main.css">
   <link rel="stylesheet" href="./styles/util.css">
   <link rel="stylesheet" href="./styles/components.css">
 </head>
 <body>
-  <div data-include="../partials/header.html"></div>
+<div data-include="../partials/header.html"></div>
 
-  <main class="container section">
-    <h1>Solicitud de cotización</h1>
-    <form id="form-cot">
-      <label>Servicio
-        <select name="servicio" id="svc">
-          <option value="tarjetas">Tarjetas de visita</option>
-          <option value="flyers">Flyers 10×15</option>
-          <option value="giganto">Gigantografías</option>
-          <option value="vinilo">Vinilo adhesivo</option>
-          <option value="pendon">Pendón</option>
-          <option value="lienzo">Lienzo</option>
-          <option value="poster">Poster</option>
-          <option value="tazon">Tazón</option>
-          <option value="credencial">Credencial</option>
-          <option value="fotocarnet">Foto carnet</option>
-        </select>
-      </label>
-      <label>Cantidad<input type="number" name="cantidad" min="1" required></label>
-      <label>Detalles<textarea name="detalles" rows="4"></textarea></label>
-      <div class="actions">
-        <button class="btn" type="submit">Enviar</button>
-      </div>
-    </form>
-  </main>
+<main class="container section">
+  <h1>Solicitud de cotización</h1>
+  <form id="form-cot">
+    <label>Servicio
+      <select name="servicio" id="svc">
+        <option value="tarjetas">Tarjetas de visita</option>
+        <option value="flyers">Flyers 10×15</option>
+        <option value="giganto">Gigantografías</option>
+        <option value="vinilo">Vinilo adhesivo</option>
+        <option value="pendon">Pendón</option>
+        <option value="lienzo">Lienzo</option>
+        <option value="poster">Poster</option>
+        <option value="tazon">Tazón</option>
+        <option value="credencial">Credencial</option>
+        <option value="fotocarnet">Foto carnet</option>
+      </select>
+    </label>
+    <label>Cantidad<input type="number" name="cantidad" min="1" required></label>
+    <label>Detalles<textarea name="detalles" rows="4"></textarea></label>
+    <div class="actions">
+      <a class="btn ghost" href="https://wa.me/56975280566" target="_blank" rel="noopener">Enviar por WhatsApp</a>
+      <button class="btn" type="submit">Enviar</button>
+    </div>
+  </form>
+</main>
+<script>
+  const q = new URLSearchParams(location.search);
+  const svc = q.get('servicio'); if(svc) document.getElementById('svc').value = svc;
+  document.getElementById('form-cot').addEventListener('submit', e=>{
+    e.preventDefault();
+    alert('¡Gracias! Integraremos envío por correo a hector.aburto@gmail.com en el siguiente paso.');
+  });
+</script>
 
-  <div data-include="../partials/footer.html"></div>
-  <script src="./scripts/include.js"></script>
-  <script>
-    // Prefill from query param
-    const q = new URLSearchParams(location.search);
-    const svc = q.get('servicio'); if(svc) document.getElementById('svc').value = svc;
-    document.getElementById('form-cot').addEventListener('submit', e=>{
-      e.preventDefault();
-      alert('¡Gracias! Esto enviará tu solicitud por email o WhatsApp. (Pendiente de integrar).');
-    });
-  </script>
+<div data-include="../partials/footer.html"></div>
+<script src="./scripts/include.js"></script>
 </body>
 </html>
